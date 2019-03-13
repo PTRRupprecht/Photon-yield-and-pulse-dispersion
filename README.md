@@ -12,7 +12,7 @@ The Github web page for this repository can be found online at [https://ptrruppr
 
 This case report is intended for two-photon microscope users who are keen on understanding more about the technical details and especially about what can go wrong with two-photon microscopes. It is written in a lab journal style and will not be peer-reviewed. Comments, suggestions and corrections, however, are much appreciated.
 
-The beautiful [publication template](https://github.com/AndrewGYork/publication_template/) for this report was provided by [Andrew York](https://github.com/AndrewGYork/).
+The beautiful [publication template](https://github.com/AndrewGYork/publication_template/) for this report had been designed by [Andrew York](https://github.com/AndrewGYork/).
 
 #### Contact
 
