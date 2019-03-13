@@ -6,16 +6,16 @@ This case report describes how a two-photon microscope was found to come with a 
 
 #### Github page
 
-The Github web page for this repository can be found online at [https://ptrrupprecht.github.io/pulse-dispersion-2P/](https://ptrrupprecht.github.io/pulse-dispersion-2P).
+The Github web page for this repository can be found online at [https://ptrrupprecht.github.io/pulse-dispersion-2P](https://ptrrupprecht.github.io/pulse-dispersion-2P/).
 
 #### Context
 
 This case report is intended for two-photon microscope users who are keen on understanding more about the technical details and especially about what can go wrong with two-photon microscopes. It is written in a lab journal style and will not be peer-reviewed. Comments, suggestions and corrections, however, are much appreciated.
 
-The template for this report was provided by [https://github.com/AndrewGYork/](AndrewGYork) : [https://github.com/AndrewGYork/publication_template/](github.com/AndrewGYork/publication_template).
+The beautiful [publication template](https://github.com/AndrewGYork/publication_template/) for this report was provided by [Andrew York](https://github.com/AndrewGYork/).
 
 #### Contact
 
 p.t.r.rupprecht+dispersion(at)gmail.com
 
-[https://ptrrupprecht.wordpress.com/](https://ptrrupprecht.wordpress.com)
+[https://ptrrupprecht.wordpress.com](https://ptrrupprecht.wordpress.com/)
