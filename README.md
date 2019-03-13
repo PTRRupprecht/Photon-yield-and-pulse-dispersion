@@ -1,5 +1,7 @@
 ### Pulse dispersion, dielectric mirrors and fluorescence yield
 
+[![DOI](https://zenodo.org/badge/175397585.svg)](https://zenodo.org/badge/latestdoi/175397585)
+
 #### Summary
 
 This case report describes how a two-photon microscope was found to come with a fluorescence yield that was lower than expected; how the underlying cause was found out in a systematic manner; and how the problem was solved. All approaches and solutions are specific for the microscope under question. However, I hope that this report (1) will inspire other people who are troubleshooting or optimizing their microscopes, (2) will help other people better understand two-photon microscopes and the relevance of technical details.
