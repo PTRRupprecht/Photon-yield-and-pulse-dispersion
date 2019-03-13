@@ -6,7 +6,7 @@ This case report describes how a two-photon microscope was found to come with a 
 
 #### Github page
 
-The Github web page for this repository can be found online at [https://ptrrupprecht.github.io/pulse-dispersion-2P](https://ptrrupprecht.github.io/pulse-dispersion-2P/).
+The Github web page for this repository can be found online at [https://ptrrupprecht.github.io/Photon-yield-and-pulse-dispersion](https://ptrrupprecht.github.io/Photon-yield-and-pulse-dispersion/).
 
 #### Context
 
