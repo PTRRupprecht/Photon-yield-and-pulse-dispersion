@@ -1,0 +1,387 @@
+<!doctype html>
+<!-- 
+##############################################################
+Ignore this boilerplate if you're just trying to edit the text.
+Skip to the part that says 'The real text begins here'
+##############################################################
+
+Based on this theme: https://github.com/broccolini/dinky , which mentioned that attribution is appreciated. Thanks, broccolini!
+-->
+<html lang="en">
+  <head>
+    <base target="_blank">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="citation_title" content="Pulse dispersion, dielectric mirrors and fluorescence yield: A case report of a two-photon microscope">
+    <meta name="citation_author" content="Peter Rupprecht">
+    <meta name="citation_publication_date" content="2019/03/01">
+    <meta name="citation_journal_title" content="Github.io">
+    <meta name="citation_pdf_url" content="https://ptrrupprecht.github.io/">
+    <title>Pulse dispersion, dielectric mirrors and fluorescence yield: A case report of a two-photon microscope</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/prism.css">
+    <!--[if lt IE 9]>
+    <script src="javascript/html5shiv/html5shiv.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <script src="javascript/scale-fix/scale.fix.js"></script>
+    <script src="javascript/python-highlighting/prism.js"></script>
+    <script async  src="javascript/Minimal-MathJax/MathJax.js?config=TeX-AMS_CHTML"></script>
+    <script src="javascript/update_figures.js"></script>
+    <script src="javascript/reference_list/reference_list.js"></script>
+    <!-- <script src="javascript/google-analytics/analytics.js"></script> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Photon yield and pulse dispersion</h1>
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/PTRRupprecht/Photons-And-Pulses/archive/master.zip">Download ZIP</a></li>
+          <li><a class="buttons github" href="https://github.com/PTRRupprecht/Photons-And-Pulses">View On GitHub</a></li>
+          <!--<li><a class="buttons pdf" href="./Publication_template%20by%20AndrewGYork.pdf">Download PDF</a></li>-->
+        </ul>
+        <p class="header">This case report was written by <a class="header name" href="https://github.com/PTRRupprecht">Peter Rupprecht</a> in the lab of <a class="header name" href="http://www.fmi.ch/research/groupleader/?group=119">Rainer Friedrich</a>.</p>
+      </header>
+<!-- 
+##############################################################
+The real text begins here.
+##############################################################
+ -->
+<section>
+<h1>Technical note / case report</h1>
+<h2>Pulse dispersion, dielectric mirrors and fluorescence yield: A case report of a two-photon microscope</h2>
+<p class="author_list">Peter Rupprecht<sup></sup></p>
+<p class="author_affiliations">Lab of <a href="https://www.fmi.ch/research/groupleader/?group=119">Rainer Friedrich</a>, Friedrich Miescher Institute of Biomedical Research (<a href="https://www.fmi.ch/">FMI</a>), Basel, Switzerland</p>
+<p class="contact_email"><sup></sup>Permanent email: p.t.r.rupprecht+dispersion(at)gmail.com</p>
+<p class="abstract">Key words: dispersion, dielectric mirror, photon yield, two-photon.</p>
+<!-- <p><a href="https://doi.org/10.5281/zenodo.231328">doi: 10.5281/zenodo.231328</a></p> -->
+
+<h3 class="onlyprint">
+Note that this is a limited PDF or print version; animated and interactive figures are disabled. For the full version of this article, please visit <a href="https://github.com/PTRRupprecht">https://github.com/PTRRupprecht</a></h3>
+
+<noscript>
+<h3>Your browser doesn't seem to support Javascript. This document uses Javascript for interactive figures, math typesetting, and to automatically generate the reference list. Either activate Javascript, or use the "Download PDF" link above if you want properly typeset math and a reference list.</h3></noscript>
+
+<h3>
+Intended audience</h3>
+<p>
+Two-photon microscope users who are keen on understanding more about the technical details and especially about what can go wrong with two-photon microscopes.
+</p>
+
+
+<h3>
+Summary</h3>
+<p>
+This case report describes how a two-photon microscope was found to come with a fluorescence yield that was lower than expected; how the underlying cause was found out in a systematic manner; and how the problem was solved. All approaches and solutions are specific for the microscope under question. However, I hope that this report (1) will inspire other people who are troubleshooting or optimizing their microscopes, (2) will help other people better understand two-photon microscopes and the relevance of technical details.
+</p>
+<p>
+First, I will describe how the problem (too low photon yield) was identified. Before identification of the problem, the same microscope had been used without obvious hints that there was indeed an issue.
+</p>
+<p>
+Next, I will describe the possible reasons underlying the problem and how the most likely cause (laser pulse dispersion) could be singled out.
+</p>
+<p>
+Then, I will explain the tests that allowed to understand which optical component caused the laser pulse dispersion (degraded dielectric mirrors).
+</p>
+<p>
+Finally, I will describe what was done to circumvent the problem and what else can be learnt from this experience.
+</p>
+
+<h3>
+Disclaimer and peer review</h3>
+<p>
+This case report is not peer-reviewed and will not be submitted for publication in a peer-reviewed journal. If you find any errors or misleading descriptions, or if you think it would be helpful to cite or link to your or someone else's research article or homepage, just send me an (informal) email. I will of course acknowledge your contribution. This report is not a final version and I hope that input from other people will help improve it. Suggestions per email to p.t.r.rupprecht+dispersion(at)gmail.com.
+</p>
+
+<h3>Quantitative comparison of photon yield across setups</h3>
+<p>
+In 2018, I was in the lucky situation to use a two-photon point scanning microscope that I had built myself in 2015 [<a class="citation" href="https://www.osapublishing.org/boe/abstract.cfm?uri=boe-7-5-1656" title="Rupprecht, P., Prendergast, A., Wyart, C. and Friedrich, R.W., 2016. Remote z-scanning with a macroscopic voice coil motor for fast 3D multiphoton laser scanning microscopy. Biomedical Optics Express, 7(5), pp.1656-1671.">Rupprecht et al., 2016</a>] and therefore knew by heart. It was a microscope based on resonant scanners for video rate 2D imaging and a remote voice coil motor in the spirit of [<a class="citation" href="https://doi.org/10.1016/j.optcom.2007.10.007" title="Botcherby, E.J., Juškaitis, R., Booth, M.J. and Wilson, T., 2008. An optical technique for remote focusing in microscopy. Optics Communications, 281(4), pp.880-887.">Botcherby et al., 2008</a>] for fast z-scanning. It was built on top of a galvo/galvo two-photon scanning <a href="https://www.sutter.com/MICROSCOPES/mom.html">Sutter scope</a> built in 2007 and used most of the original components, like the MaiTai laser, the pockels cell, mirrors, (scan/tube) lenses and the dichroic. Therefore, there was no reason to assume there was a problem with any of those components.</p>
+
+<p>The point spread function (PSF) of the microscope (ca. 3-4 &mu;m FWHM in z) was okay, given that the beam underfilled the back aperture of the objective. In 2018, I tried to use the microscope for calcium imaging with the calcium-sensing dye OGB-1, which I injected in the (zebrafish) brain area of interest.</p>
+
+<p>However, at some point I noticed that the amount of signal I could get from this setup (from now on called "setup A"; Fig. 1/left) was low when compared to results with a two-photon point scanning Sutter scope ("setup B"; Fig. 1/middle) that was equally built in 2007, used the same laser and an identical objective, with similar laser power below the objective (ca. 20 mW), and with only slightly better PSF (ca. 3 &mu;m FWHM in z).</p>
+
+<figure id="Figure_1">
+<img src="./images/figure_1/Figure_comparison.png"
+ alt="Figure 1" id="Figure_1_image">
+<figcaption><strong>Figure 1.</strong> Left/middle: Similar effective line dwell times with the same sample (OGB-1-labeled neurons) with the same laser power for setup A (left) and setup B (middle; see text for explanations). Right: Fluorescence plastic slide used for quantitative comparisons of fluorescence yield.</figcaption>
+</figure><p></p>
+
+To compare the photon yields of the two setups quantitatively, I took advantage of a method suggested on the <a href="http://labrigger.com/blog/2010/07/30/measuring-the-gain-of-your-imaging-system/">Labrigger blog</a> (and tested some years ago by <a href="https://ptrrupprecht.wordpress.com/2015/03/02/gain-and-photons-per-pixel/">myself</a>). This method calculates the gain \(g\) of the imaging system, i.e., the conversion factor between photon count at the detector and the numerical pixel value saved to the image file. The method does so by exploiting the Poisson statistics (mean value \(\mu\), variance \(\sigma^2\)) of fluorescent photon arrival at the PMT detector:
+
+<div>
+    $$\begin{align} g&= \frac{\sigma^2}{\mu}  \end{align} $$
+</div>
+
+<p>Once determined, the gain factor \(g\) allows to quantify the number of fluorescence photons arriving at the detector using the pixel values of the image. Mean and variance can be taken over the different pixels of the image of a spatially homogeneous sample (Labrigger post), or over the temporal trace of a spatially inhomogeneous but temporally stable fluorescent sample (my previous test). Here, I used the second method with a temporally stable sample, for which I used a cheap fluorescent plastic slide (Fig. 1/right).</p>
+
+<p>As mentioned in the comments on the Labrigger blog post, this quantification can be contaminated by PMT offsets not accounted for (which I measured very carefully) and by multiplicative noise of the PMT cascade. Multiplicative noise adds up to the Poisson noise and therefore creates additional, non-poisson variance in the data, leading to a systematic error of the gain measurement. However, in this special case, where the same PMT type was used both with setup A and setup B at the same PMT gain setting, this systematic error was the same for both setups and could therefore, in a first approximation, be neglected.</p>
+
+<p>The outcome of this quantitative comparison was devastating, indicating that setup A yielded roughly 8x fewer photons compared to setup B at the same conditions! What could be the reason for this huge difference?</p>
+
+<p>The number of detected photons depends both on the number \(N_{photons}\) of photons emitted by excited fluorophors and on the efficiency of the detection path. To test whether this low photon yield was due to the detection path, I simply exchanged the detection pathways of the two systems (including the PMTs, the objective, the dichroic and everything in-between). This was only possible because both systems were quasi-identical Sutter scopes, and the complete detection path could be mounted and unmounted as a whole. However, I observed only a minor change of the photon yield (+15-25%), ruling out a major difference of photon collection efficiencies between the two microscopes.</p>
+
+<p>So what about the number of emitted fluorescence photons? \(N_{photons}\) is influenced by several factors [<a class="citation" href="http://light.ece.illinois.edu/ECE564/Research_Projects_files/TPFM_annurev.bioeng.2.1.pdf" title="So PT, Dong CY, Masters BR, Berland KM. Two-photon excitation fluorescence microscopy. Annual Review of Biomedical Engineering. 2000 Aug;2(1):399-429.">So et al., 2000</a>]:
+
+<div>
+    $$\begin{align} N_{photons}&\sim \frac{P_0^2}{\tau_p f_p^2} \frac{\text{NA}^4}{\lambda_{exc}^2},  \end{align} $$
+</div>
+
+<p>with the average power \(P_0\) of the excitation laser, the <a href="https://www.rp-photonics.com/pulse_duration.html">laser pulse duration</a> \(\tau_p\), the <a href="https://www.rp-photonics.com/pulse_repetition_rate.html">pulse repetition frequency</a> \(f_p\), the <a href="https://en.wikipedia.org/wiki/Numerical_aperture">numerical aperture NA</a> of the system, the excitaton wavelength \(\lambda_{exc}\), and a couple of factors that are omitted here.</p>
+
+<p>For the two systems, the resolution (reflected by the NA) was roughly the same, as measured by the PSF (see above). Since the very same laser was used for both setups, the pulse repetition rate \(f_p\) was the same for both setups, around 80 MHz, as was the excitation wavelength, \(\lambda_{exc}\), at 920 nm. With the average power \(P_0\) calibrated with a thermal power meter below the objective to be the same for both setups, this left the laser pulse width \(\tau_p\) as the only remaining possible major difference.</p>
+
+<p>The temporal pulse width of a classical Ti:Sa turnkey laser like the <a href="https://www.spectra-physics.com/products/ultrafast-lasers/mai-tai">MaiTai</a> (Spectra Physics) is just above 100 femtoseconds (fs) when the beam comes out of the laser. Since the product of temporal pulse width and spectral range cannot be below a physical limit (think of the uncertainty principle), these very short femtosecond pulses are actually colored, with a spectral range of ca. 10 nm. The spectral components, however, behave a bit differently depending on the wavelength, leading for example to <a href="https://en.wikipedia.org/wiki/Chromatic_aberration">chromatic aberrations</a> in an imaging system. But also the temporal pulse shape can be affected since red photons travel faster through glass than blue photons. This dependence of the speed of light on the color of light is called <a href="https://en.wikipedia.org/wiki/Dispersion_(optics)">dispersion</a>. Many optical components like lenses or objectives therefore can lead to temporal dispersion of the pulse shape. In a typical two-photon point-scanning setup, the 100 fs-pulses coming out from the Ti:Sa laser will usually be dispersed into 300-600 fs-pulses below the objective. Following the equation above, this results in a 3-6-fold reduction of the fluorescence yield, while the average laser power remains unchanged.</p>
+
+<p>Therefore I measured the pulse width of the laser pulses both right after the laser (or, to be precise, after the pockels cell) and below the objective. Usually, pulse widths are measured using an interferometer and therefore cannot be determined below the objective due to the diverging beam. However, the autocorrelator <a href="https://www.ape-berlin.de/en/autocorrelator/carpe/">Carpe</a> (from the company APE) that happened to sit somewhere in a lab cupboard is a device that is designed to perform exactly this task. To describe it very briefly, the Carpe inserts a variable optical delay into the beam path before the microscope, generating two output pulses that are closely spaced in time from one single input pulse. Using the nonlinear dependence of two-photon excitation, a two-photon excitation-based sensor after the microscope (that is, below the objective) can measure the overlap of the two delayed pulses. From the overlap, this device can calculate the pulse width of the original pulse. It is, therefore, a very clever physical implementation of an autocorrelation function (which is a bit broader than the pulse shape).</p>
+
+<p>The device therefore does not directly show the pulse shape, but rather the autocorrelation function of the pulse shape. However, it automatically calculates the underlying pulse width. See the legend in Fig. 3 below for a more detailed explanation.</p>
+
+<figure id="Figure_2">
+<img src="./images/figure_2/Carpe.png"
+ alt="Figure 2" id="Figure_2_image">
+<figcaption><strong>Figure 2.</strong> Left: Schematic design of the <a href="https://www.ape-berlin.de/en/autocorrelator/carpe/">Carpe</a> autocorrelator (ignore FemtoControl, the prism compressor). Right: Sensor to be used below the objective.</figcaption>
+</figure><p></p>
+
+<p>The Carpe autocorrelator is not super-intuitive to work with (for somebody new to this device), but the APE help service turned out to be very supportive, also for in-depth technical discussions. When I first measured the pulse width below the objective, I immediately knew that something was wrong (Fig. 3/right). Not only was the the pulse quite broad in time; in addition, the autocorrelator showed a non-linear distortion of the pulse shape with two heavy shoulders. Obviously, this would be highly detrimental to the fluorescence yield.
+
+<figure id="Figure_3">
+<img src="./images/figure_3/Pulse_Width_measurement.png"
+ alt="Figure 3" id="Figure_3_image">
+<figcaption><strong>Figure 3.</strong> Left: Pulse width measurement (autocorrelation function) before the microscope. Right: Pulse width measurement (autocorrelation function) below the objective. Mind the different temporal scales (x-axis, not labeled). The line in the top left corner indicates the FWHM of the measured autocorrelation function of the pulse. The FHWM of the pulse itself, however, is estimated in the line below ("sech2 = ..."). It assumes a single peak and therefore fails to properly quantify the width of the pulse for the right-hand side.</figcaption>
+</figure><p></p>
+
+<p> The waveform of the autocorrelation function in Fig. 3 suggests that there is not a single pulse, but two pulses. To illustrate this idea more clearly, Fig. 4 shows on the left side a pair of pulses (spaced by few 100 femtoseconds) and on the right side the resulting autocorrelation function. When the two pulses merge to a single one, the trident autocorrelation transforms into a single Gaussian-like shape.</p>
+
+<figure id="Figurexx">
+<img width=100% src="./images/figure_xx/PulseShape_Autocorrelation.gif"
+ alt="Figure 4" id="Figure_xx_image">
+<figcaption><strong>Figure 4.</strong> Relationship of pulse shape and the resulting autocorrelation function (schematic illustration). A complex pulse consisting of two temporally spaced laser pulses is shown to the left; the temporal distance between the two pulses is varied in the video. On the right side, the corresponding autocorrelation function is computed. Only if the two pulses coincide (which means that there is only a single pulse), the trident shape of the autocorrelation function disappears.</figcaption>
+</figure><p></p>
+
+<p>This illustration hopefully makes it easier to understand what a given autocorrelation function means for the underlying temporal pulse shape.
+
+<p>But where did this unusual double-pulse come from?</p>
+
+
+<h3>Possible reasons underlying femtosecond laser pulse distortion</h3>
+
+<p>After consultation with the <a href="http://confocal-microscopy-list.588098.n2.nabble.com/">confocal microscopy mailing list</a> and with my PhD supervisor, I had collected a couple of candidate reasons for the strange pulse shape:</p>
+
+<ol>
+<li>As mentioned already, the autocorrelation function in Fig. 3 could mean that there are two pulses that arrive shortly one after the other, instead of just one single pulse, as illustrated in Fig. 4. This could be due to an optical element or a coating that creates an internal reflection and therefore a second, delayed pulse.
+</li>
+<li>The strange pulse measurement could be due to a measurement error or handling error of the Carpe autocorrelator.
+</li>
+<li>According to a very experienced microscopy expert, this "pulse on a pedestal" shape of the autocorrelation functions is a "classic of higher order dispersion caused by large amounts of glass" or other optical elements.
+</li>
+<li>Another explanation for the double pulse could be that slightly birefringent material could have been used in the pockels cell or in a polarizing beam splitter. <a href="https://en.wikipedia.org/wiki/Birefringence">Birefringent material</a> consists of an anisotropic crystal that makes light polarized orthogonal and parallel to the so-called optical axis of this crystal travel faster and slower, respectively. This would result in the laser pulse being split up in two pulses with different polarizations that are delayed one with the respect to the other. 
+</li>
+</ol>
+
+
+<h3>Identification of the underlying problem</h3>
+
+<h6>1. A double-pulse due to a reflecting interface</h6>
+
+<p>As can be seen from the autocorrelation function in Fig. 3 (and as illustrated schematically in Fig. 4), the temporal spacing between the two pulses is around \(\Delta t = 250\) fs. This permits to calculate the approximate physical distance across which the pulse must be reflected:
+
+<div>
+    $$\begin{align} \Delta x = \Delta t \cdot c/2 = 250\cdot 10^{-15} \cdot 3\cdot 10^8/2\ m \approx 38\; \mu m \end{align} $$
+</div>
+
+Which is much shorter than the width of any optical element like a pockels cell or a lens, and much thicker then the thickness of e.g. a lens coating. This possibility can therefore be ruled out.
+
+</p>
+
+<h6>2. A measurement error</h6>
+
+<p>I contacted an engineer of APE, the company that produces the Carpe autocorrelator. He excluded the possibility of a handling error.</p>
+
+<h6>3. Dispersion by large amounts of glass</h6>
+
+<p>The setup, as described before [<a class="citation" href="https://www.osapublishing.org/boe/abstract.cfm?uri=boe-7-5-1656" title="Rupprecht, P., Prendergast, A., Wyart, C. and Friedrich, R.W., 2016. Remote z-scanning with a macroscopic voice coil motor for fast 3D multiphoton laser scanning microscopy. Biomedical Optics Express, 7(5), pp.1656-1671.">Rupprecht et al., 2016</a>], uses a remote scanning unit, resulting in several centimeters of additional glass in the system. This could potentially lead to strong additional dispersion. I therefore removed all lenses (except for scan lens, tube lens and objective) from the microscope. The resulting pulse width was smaller. The shape, however, remained unchanged. Both scan lens, tube lens and objective were the same for the previously mentioned setup B and were therefore unlikely to be the culprit.</p>
+
+<h6>4. A double-pulse due to birefringent material</h6>
+
+<p>Pulse-splitting by a birefringent material would mean that the resulting double pulse would consist of two pulses of orthogonal polarization. This means that a polarization filter held into the beam path would be able to block out one of the two pulses, depending on the insertion angle.</p>
+
+<figure id="Figure_4">
+<img src="./images/figure_4/Polarizing_glasses.png"
+ alt="Figure 5" id="Figure_4_image">
+<figcaption><strong>Figure 5.</strong> Polarization glasses leftover from a cinema visit.</figcaption>
+</figure><p></p>
+
+<p>I used goggles leftover from a 3D cinema visit as polarizer. Inserting the polarization glasses into the beam path and rotating the filter reduced the total power of the transmitted light but did not change the temporal pulse shape. This ruled out the possibility that birefringeant material resulted in a double-pulse.</p>
+
+<h6>5. Seemingly innocuous optical elements</h6>
+
+<p>Therefore something else was the culprit - one of those seemingly innocuous optical elements in the beam path. In total, there were 8 lenses and 3 other glass crystal-based optical elements, and in addition many mirrors of several different kinds. Some of the lenses and mirrors (like the tube lens and the scan lens and a couple of mirrors) could not be easily exchanged. Altogether, quite a daunting task to start with ...</p>
+
+<p>To start with, I removed the entire remote scanning unit (described in [<a class="citation" href="https://www.osapublishing.org/boe/abstract.cfm?uri=boe-7-5-1656" title="Rupprecht, P., Prendergast, A., Wyart, C. and Friedrich, R.W., 2016. Remote z-scanning with a macroscopic voice coil motor for fast 3D multiphoton laser scanning microscopy. Biomedical Optics Express, 7(5), pp.1656-1671.">Rupprecht et al., 2016</a>], but for this purpose it's just a big amount of glass), consisting of a polarizing beam splitter, three large-aperture Thorlabs achromats and a small gold mirror. This remote unit was inserted into the system just before the xy-scan unit, i.e., just before the "real" microscope beam path.</p>
+
+<p>Upon removal of this unit, the original pulse shape (black in Fig. 6) was slightly changed - apparently due to linear dispersion - but still deformed in a similar way as before (red in Fig. 6). But this revealed everything I needed to know in order to find the culprit. Let's go into the details.</p>
+
+<p>First, the autocorrelation function measured with the remote scan unit removed (red, dashed lines) was very similar to the original one (black, solid line), but compressed in time. This showed that the nonlinear dispersion responsible for the double-pulse must have happened <strong>before</strong> this point in the beam path. Why? If the nonlinear dispersion had been generated <strong>after</strong> this point in the beam path, the lag of the second pulse would have been unaffected by insertion or removal of linearly dispersing glass into the beam path (blue in Fig. 6). From these observations and thought experiments follows a straightforward rule to identify optical components that cause nonlinear dispersion with double pulses: insertion of simple glass with linear dispersion before and after the optical element under question.</p> 
+
+<figure id="Figure_5">
+<img src="./images/figure_5/Pulse_shape_all.svg"
+ alt="Figure 6" id="Figure_5_image">
+<table class="figure_controls">
+  <tr>
+  <td>Configuration: </td><td><select id="Pulse_shape_X" onchange="update_figure_5()">
+    <option value="1">Nonlinear dispersion after the removed element</option>
+    <option value="2">No optical element (z-scanning unit) removed</option>
+    <option value="3">Nonlinear dispersion before the removed element</option>
+    <option value="all" selected="selected">Overlay</option>
+  </select></td><td>(Select between the options)</td>
+    </tr>
+</table>
+<figcaption><strong>Figure 6.</strong> Pulse shape (schema) in the original configuration (black). With the remote scanning unit removed (red) and optical elements <strong>before</strong> the unit responsible for the double-pulse. And for the hypothetical case of removing the remote scanning unit, but with optical elements <strong>after</strong> this unit (e.g. tube lens, scan lens, galvo scan mirror, objective) responsible for the nonlinear distortion. </figcaption>
+</figure><p></p>
+
+<p>At this point it was clear that the culprit was before the remote scanning unit in the beam path. Yet, there was basically no optical element before the remote scanning unit - except for mirrors.</p>
+
+<p>In retrospect, it is an obvious case: dielectric mirrors. I sorted it out with help from the confocal microscopy mailing list, and all the relevant details have been summarized already by Labrigger in a <a href="http://labrigger.com/blog/2018/06/02/mirrors-and-lenses-for-multiphoton-microscopes/">blog post</a>. In a nutshell, dielectric mirrors consist of many layers of coatings (Fig. 7) that basically act as interference filters, resulting in the reflection of the laser beam.</p>
+
+<figure id="Figure_6">
+<img width="100%" src="https://upload.wikimedia.org/wikipedia/commons/1/1c/DBR_SEM.jpg"
+ alt="Figure 7" id="Figure_7_image">
+<figcaption><strong>Figure 7.</strong> A dielectric mirror, scanning electron microsocpy image with clearly visible alternating layers. <a href="https://commons.wikimedia.org/wiki/File:DBR_SEM.jpg">Wikimedia Commons / Public Domain</a>.</figcaption>
+</figure><p></p>
+
+<p>The dielectric mirrors in this setup were already older than 10 years. In addition, glue had been applied to the rear side of some of the mirrors. Both effects probably caused an irregular spacing of the interference layers of selected locations of some of the mirrors and therefore a highly nonlinear distortion of the temporal pulse shape. This effect was not due to all of the dielectric mirrors, but only 2 or 3 of them, with minor distortive contributions from the other mirrors. To make things a bit more complicated, the incidence angle onto each mirror mattered as well as the incident polarization, and a mirror that worked nicely for one incidence angle produced strong nonlinear dispersion for a different incidence angle.</p>
+
+<p>As any interference effects, the distortions caused by these mirrors also turned out to be strongly wavelength-dependent. As shown below in Fig. 10, the temporal duration and shape of the laser pulse strongly depends on the wavelength (see again the <a href="http://labrigger.com/blog/2018/06/02/mirrors-and-lenses-for-multiphoton-microscopes/">Labrigger blog post</a> for a bit more detail).</p>
+
+<p>However, this strong dependence on the wavelength also allows to check for these pulse shape deformations with no need for a specialized autocorrelator: the deformation of the pulse shape is simply reflected by the fluorescence yield of a stable sample. I used the above-mentioned green plastic slide to record the fluorescence elicited by laser pulses at different wavelengths for both setups:</p>
+
+<figure id="Figure_6">
+<img src="./images/figure_6/wavelength_dep_1B.jpg"
+ alt="Figure 8" id="Figure_6_image">
+<table class="figure_controls">
+  <tr>
+  <td>Setup A/B: </td><td><select id="Pulse_wavelength1" onchange="update_figure_6()">
+    <option value="A">Setup B</option>
+    <option value="B" selected="selected">Setup A</option>
+  </select></td><td>(Select between the options)</td>
+    </tr>
+</table>
+<figcaption><strong>Figure 8.</strong> Setup A: Anormal wavelength-dependence of fluorescence yield, reflecting nonlinear deformation of the temporal pulse shape in a wavelength-dependent manner. Setup B: Normal wavelength-dependence of fluorescence yield. </figcaption>
+</figure><p></p>
+
+<p>Of course, the fluorescence yield also depends on the wavelength because both the two-photon excitation cross section of the fluorophor and the <a href="https://www.spectra-physics.com/assets/client_files/files/documents/datasheets/Mai%20Tai%20Data%20Sheet.pdf">output power of the Ti:Sa laser</a> are wavelength-dependent. However, those dependencies are smooth (as for setup B in Fig. 8) and cannot explain the non-monotonous wavelength-dependence observed (setup A in Fig. 8). The result for setup A indicates that the laser pulse is strongly distorted at around 880 nm and 920 nm.</p>
+
+<p>This simple experiment does not inform about the pulse shapes directly. But it is clear from the spectrum in Fig. 8 that "setup A" has an issue related to strong, nonlinear pulse dispersion.</p>
+
+<p>How can we solve the problem?</p>
+
+<h3>Solving the problem</h3>
+
+
+<p>To solve the problem, I replaced, as suggested by the confocal microsocopy mailing list, all dielectric mirrors with metal (gold) mirrors. Metal mirrors are coated with very few (protective) interference coatings and are therefore not strongly dispersive. They are actually not more expensive than dielectric mirrors, but are often replaced with dielectric mirrors because the latter offer higher reflectances than metal mirrors.</p>
+
+<p>After replacing everything with gold mirrors, the laser pulse was quite long (FWHM of more than 500 fs), and the fluorescence yield was still by far lower in this setup (setup A) than in the previously mentioned setup B. Therefore, I measured the pulse width in this very impressive setup B, and it turned out to be just above 150 fs below the objective! At this point, I realized that setup B also used some old dielectric mirrors, which, however, did not lead to strange pulse-on-pedestal pulse shapes but instead - by chance - resulted in a highly compressed, optimized, short laser pulse. That was unexpected.</p>
+
+<p>To match the superior performance of setup B, I first inserted a <a href="https://en.wikipedia.org/wiki/Prism_compressor">prism compressor</a> (again from the company APE), which is designed to add negative dispersion to the laser pulse, ideally resulting in an optimal, short laser pulse at the sample. However, the alignment turned out to be quite tedious. The additional optical path inside of the prism compressor resulted in a diverging beam path, and I finally did not manage to make it work properly for all wavelengths. Plus, it did not seem to be entirely stable over days, and since I did not have much experience with pulse compressors, I would have taken me probably too long to solve this problem properly. Therefore I chose the quick-and-dirty solution: I switched back to dielectric mirrors.</p>
+
+As mentioned earlier, the pulse distortion for these mirrors is strongly wavelength-dependent, and also strongly dependent on the polarization and angle of the incident laser beam with respect to the mirrors. Since I wanted to use the system primarily around 930 nm, I arranged a couple of dielectric mirrors reflecting the laser beam before it entered the microscope. Then, I randomly exchanged mirrors, rotated them or changed the arrangement completely. This went on for several hours, until I arrived at a configuration with the desired short pulse width around 930 nm:</p>
+
+<figure id="Figure_7">
+<img src="./images/figure_7/RandomMirrorOptimization.jpg"
+ alt="Figure 9" id="Figure_7_image">
+<figcaption><strong>Figure 9.</strong> Result of random mirror optimization on the optical table. The six dieletric mirrors were arranged such that the temporal pulse width at the target wavelength (around 930 nm) was as short and nice as possible.</figcaption>
+</figure><p></p>
+
+This technique of random mirror optimization turned out to be very efficient and by far less tedious than aligning an old-fashioned prism compressor. (I'd like to mention here that there are also chirped mirrors that can be used for pulse compression, which seem to be a bit easier to work with; <a href="https://www.newport.com/f/chirped-mirrors-for-ultrashort-pulses">Newport</a>, <a href="https://www.thorlabs.com/newgrouppage9.cfm?objectgroup_id=3746&gclid=Cj0KCQiA1NbhBRCBARIsAKOTmUsVNo6tCJb8Me8Tdn3dKj7rMfZeSUayhsWCrQr5ggRPjF4O8IS-TtgaAu6NEALw_wcB">Thorlabs</a>.) I have to admit that this optimization process is only slighty based on an understanding of what happens and how which mirror contributes to pulse shaping, and pretty much based on simple serendipity - but it works.</p>
+
+<p>Here is the (close-to-final) result of this random optimization process. The pulse width at 931 nm was around 180 fs (FWHM). Please use the drop-down menu in Fig. 10 (or arrow keys of your keyboard) to go through the wavelength-dependence of the pulse shapes. Due to the nonlinearities contributed by dielectric mirrors, this is not a Gaussian-like curve any more, but it seems to be very close.</p>
+
+<figure id="Figure_8">
+<img width="100%" src="./images/figure_8/009.jpg"
+ alt="Figure 10" id="Figure_8_image">
+<table class="figure_controls">
+  <tr>
+  <td>Wavelength: </td><td><select id="Pulse_shapes" onchange="update_figure_8()">
+    <option value="42">897 nm</option>
+    <option value="41">898 nm</option>
+    <option value="40">899 nm</option>
+    <option value="39">900 nm</option>
+    <option value="38">901 nm</option>
+    <option value="37">902 nm</option>
+    <option value="36">903 nm</option>
+    <option value="35">904 nm</option>
+    <option value="34">905 nm</option>
+    <option value="33">906 nm</option>
+    <option value="32">907 nm</option>
+    <option value="31">908 nm</option>
+    <option value="30">909 nm</option>
+    <option value="29">910 nm</option>
+    <option value="28">911 nm</option>
+    <option value="27">912 nm</option>
+    <option value="26">913 nm</option>
+    <option value="25">914 nm</option>
+    <option value="24">915 nm</option>
+    <option value="23">916 nm</option>
+    <option value="22">917 nm</option>
+    <option value="21">918 nm</option>
+    <option value="20">919 nm</option>
+    <option value="19">920 nm</option>
+    <option value="18">921 nm</option>
+    <option value="17">922 nm</option>
+    <option value="16">923 nm</option>
+    <option value="15">924 nm</option>
+    <option value="14">925 nm</option>
+    <option value="13">926 nm</option>
+    <option value="12">927 nm</option>
+    <option value="11">928 nm</option>
+    <option value="10">929 nm</option>
+    <option value="09" selected="selected">930 nm</option>
+    <option value="08">931 nm</option>
+    <option value="07">932 nm</option>
+    <option value="06">933 nm</option>
+    <option value="05">934 nm</option>
+    <option value="04">935 nm</option>
+    <option value="03">936 nm</option>
+    <option value="02">937 nm</option>
+    <option value="01">938 nm</option>
+    <option value="00">939 nm</option>
+  </select></td><td>(Select between the options)</td>
+    </tr>
+</table>
+<figcaption><strong>Figure 10.</strong> Wavelength-dependence of the pulse shape below the objective. The autocorrelator software only allowed for discrete gain settings, resulting in arbitrary offsets and non-optimal visualization for some wavelengths.</figcaption>
+</figure><p></p>
+
+
+
+<h3>Conclusion</h3>
+
+<p>What I learned from this brief excursion in setup optimization: Dielectric mirrors can dramatically affect the pulse shape of femtosecond lasers (Figs. 3, 6, 10). Dielectric mirrors should be avoided for femtosecond laser pulses in general, especially if they are old; or they should be taken advantage of a) by choosing the best wavelength and/or b) by some sort of random mirror optimization (Fig. 10).</p>
+
+<p>I realized that an autocorrelator can be necessary to understand a microscope based on pulsing lasers. However, recording the wavelength-dependent brightness of a stable object is an alternative source of information about temporal pulse deformations (Fig. 8).</p>
+
+<p>Finally, I have realized that it is possible to work with a setup for years without understanding some of its oddities, and that it can take a lot of time to single down a strange behavior of an existing setup to a specific component or effect. All the more I'm glad that I've returned from this rabbit hole with some lessons learned!</p>
+
+
+<h3>Acknowledgements</h3>
+
+<p>For helpful input and discussions, I'd like to thank Craid Brideau, Michael Giacomelli, Zdenek Svindrych, David Chen and Darry McCoy from the confocal microscopy mailing list, as well as a person named "dsp", Mateusz Ibek from APE Berlin, as well as Tommaso Caudullo and Rainer Friedrich for comments on an earlier version of this report. I'd also like to thank Andrew York for providing an excellent <a href="https://github.com/AndrewGYork/publication_template">template for scientific publications via Github pages</a>.</p>
+
+<noscript>
+<h3>Your browser doesn't seem to support Javascript. This document uses Javascript to generate a reference list, which would normally be displayed here. Either activate Javascript, or use the "Download PDF" link above if you want to see the reference list.</h3></noscript>
+
+</section>
+<footer>
+  <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="./images/cc_by_4p0.png"></a>
+
+  <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a></small></p>
+</footer>
+</div>
+ <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+</body>
+</html>
+ 
