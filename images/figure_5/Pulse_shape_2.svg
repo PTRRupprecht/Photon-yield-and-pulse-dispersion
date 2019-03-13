@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="svg2" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="106.46mm" width="172.05mm" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 609.64173 377.21698">
+ <defs id="defs4">
+  <marker id="marker4644" refY="0" refX="0" orient="auto" overflow="visible">
+   <path id="path4646" d="m0 0 5-5-17.5 5 17.5 5-5-5z" fill-rule="evenodd" transform="matrix(-.8 0 0 -.8 -10 0)" stroke="#000" stroke-width="1pt"/>
+  </marker>
+  <clipPath id="clipPath5799" clipPathUnits="userSpaceOnUse">
+   <rect id="rect5801" style="color-rendering:auto;color:#000000;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000000;image-rendering:auto" fill-rule="evenodd" height="472.75" width="506.09" stroke="#000" y="228.08" x="-412.14" stroke-width="1.5" fill="#fff"/>
+  </clipPath>
+  <clipPath id="clipPath5799-7" clipPathUnits="userSpaceOnUse">
+   <rect id="rect5801-2" style="color-rendering:auto;color:#000000;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000000;image-rendering:auto" fill-rule="evenodd" height="472.75" width="506.09" stroke="#000" y="228.08" x="-412.14" stroke-width="1.5" fill="#fff"/>
+  </clipPath>
+ </defs>
+ <metadata id="metadata7">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g id="layer1" transform="translate(159.68 -256.53)">
+  <rect id="rect6553" style="color-rendering:auto;color:#000000;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000000;image-rendering:auto" fill-rule="evenodd" height="460.71" width="797.14" y="213.75" x="-221.11" fill="#fff"/>
+  <g id="g5899" stroke="#000" stroke-width="2.3" fill="none">
+   <path id="path4147" d="m-330.32 600.82s69.701 3.0304 124.25-1.0102c54.548-4.0406 106.07 2.0203 136.37-11.112 30.305-13.132 47.477-53.538 51.518-73.741 4.0406-20.203 9.0914-60.609 26.264-63.64 17.173-3.0305 15.152 25.254 33.335 21.213 18.183-4.0406 22.223-31.315 27.274-61.619 5.0508-30.305 8.0812-50.508 12.122-72.731 4.0406-22.223 8.0812-56.569 15.152-56.569 7.0711 0 16.162 43.437 21.213 73.741 5.0508 30.305 12.122 79.802 19.193 93.944 7.0711 14.142 7.0711 27.274 18.183 31.315 11.112 4.0406 15.152-15.152 22.223-15.152 7.0711 0 28.284 15.152 38.386 57.579 10.102 42.426 8.0812 71.721 71.721 76.772 63.64 5.0508 191.93 3.0305 191.93 3.0305" clip-path="url(#clipPath5799)"/>
+   <path id="path4147-7" d="m-330.32 600.82s69.701 3.0304 124.25-1.0102c54.548-4.0406 106.07 2.0203 136.37-11.112 30.305-13.132 47.477-53.538 51.518-73.741 4.0406-20.203 9.0914-60.609 26.264-63.64 17.173-3.0305 15.152 25.254 33.335 21.213 18.183-4.0406 22.223-31.315 27.274-61.619 5.0508-30.305 8.0812-50.508 12.122-72.731 4.0406-22.223 8.0812-56.569 15.152-56.569 7.0711 0 16.162 43.437 21.213 73.741 5.0508 30.305 12.122 79.802 19.193 93.944 7.0711 14.142 7.0711 27.274 18.183 31.315 11.112 4.0406 15.152-15.152 22.223-15.152 7.0711 0 28.284 15.152 38.386 57.579 10.102 42.426 8.0812 71.721 71.721 76.772 63.64 5.0508 191.93 3.0305 191.93 3.0305" clip-path="url(#clipPath5799-7)" transform="matrix(-1 0 0 1 191.89 .018784)"/>
+  </g>
+  <path id="path4544-2" d="m95.965 178.6v14.123 415.19h-450.53" stroke="#000" stroke-width="1.5" fill="none"/>
+  <text id="text6028" style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="12.5px" line-height="100%" y="630.11841" x="320.21832" font-family="Arial" fill="#000000"><tspan id="tspan6030" font-size="17.5px" y="630.11841" x="320.21832">Time lag fs]</tspan></text>
+  <rect id="rect6406" style="color-rendering:auto;color:#000000;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000000;image-rendering:auto" fill-rule="evenodd" height="17.857" width="157.14" y="587.36" x="377.86" fill="#fff"/>
+  <path id="path4544" marker-end="url(#marker4644)" d="m95.924 178.58v429.31h333.35" stroke="#000" stroke-width="1.5" fill="none"/>
+ </g>
+</svg>
